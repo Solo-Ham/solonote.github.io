@@ -1,0 +1,207 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Current User Section */
+#current-user {
+    margin: 20px 0;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Use percentage for width */
+    max-width: 800px; /* Limit max-width */
+    margin-top: 30px;
+}
+
+#current-user p {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #333;
+}
+
+#current-user button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#current-user button:hover {
+    background-color: #0056b3;
+}
+
+/* Note Add Form */
+#note-add-div {
+    display: none;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Use percentage for width */
+    max-width: 600px;
+}
+
+#note-add-div label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#note-add-div input,
+#note-add-div textarea {
+    width: 100%; /* Take up full width */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#note-add-div button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#note-add-div button:hover {
+    background-color: #218838;
+}
+
+/* Notes List */
+#note-list {
+    margin-top: 30px;
+    width: 90%; /* Use percentage for width */
+    max-width: 800px;
+}
+
+#add-note-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+#add-note-button:hover {
+    background-color: #0056b3;
+}
+
+/* Individual Note */
+#note {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 90%; /* Use percentage for width */
+    max-width: 800px;
+}
+
+#note h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#note p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+#note button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#note button:nth-child(2) {
+    background-color: #ffc107;
+}
+
+#note button:hover {
+    opacity: 0.9;
+}
+
+/* Responsive Design for Mobile and Tablet Screens */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    /* Adjusting the current user section */
+    #current-user {
+        width: 100%; /* Full width on smaller screens */
+        padding: 15px;
+    }
+
+    /* Adjusting the note add form */
+    #note-add-div {
+        padding: 20px;
+    }
+
+    /* Making the note buttons more accessible */
+    #add-note-button,
+    #note-add-div button,
+    #note button {
+        width: 100%; /* Make buttons take full width */
+        padding: 12px;
+    }
+
+    /* Adjusting note section for small screens */
+    #note h4 {
+        font-size: 18px; /* Smaller title on small screens */
+    }
+
+    #note p {
+        font-size: 14px; /* Smaller text for better readability */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens (e.g., phones) */
+    body {
+        padding: 5px;
+    }
+
+    #current-user {
+        padding: 10px;
+    }
+
+    #note-add-div {
+        padding: 15px;
+    }
+
+    #note h4 {
+        font-size: 16px;
+    }
+
+    #note p {
+        font-size: 12px;
+    }
+}

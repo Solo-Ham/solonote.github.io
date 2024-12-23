@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Note</title>
+    <link rel="stylesheet" href="update_note.css">
+
+</head>
+<body>
+    <form id="update-note">
+        <label for="subject">Subject</label>
+        <input name="subject" type="text" id="subject">
+        <label for="body">Body</label>
+        <input name="body" type="text" id="body">
+        <button type="submit" id="update">Update</button>
+    </form>
+
+
+<script>
+const accessToken = localStorage.getItem('access');
+console.log(accessToken);
+
+if(!accessToken){
+    alert('access token missing')
+}
+
+document.addEventListener('DOMContentLoaded', async function (){
+    const params = new URLSearchParams(window.location.search)
+    let noteId = params.get('noteId')
+
+   
+   
+    if(noteId){
+        const response = await fetch(`http://127.0.0.1:8000/api/note-detail/${noteId}`,{
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${accessToken}`,
+                'Content-Type': 'application/json'
+            }
+        })
+
+        if(response.ok){
+            const data = await response.json();
+            document.getElementById('subject').value = data.title;
+            document.getElementById('body').value = data.body;
+        }
+
+        document.getElementById('update-note').addEventListener('submit', async function (event){
+            event.preventDefault()
+        const sub = document.getElementById('subject').value
+        console.log(sub);
+        
+        const body = document.getElementById('body').value
+        console.log(body);
+        
+
+        const updateContent = {
+            'title': sub,
+            'body': body
+        }
+
+      const response = await fetch(`http://127.0.0.1:8000/api/update-note/${noteId}/`, {
+        method: 'PUT',
+        headers: {
+            'Authorization': `Bearer ${accessToken}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({'title': sub, 'body': body})
+      })
+
+    if(response.ok){
+    const result = response.json()
+    console.log(result);
+    window.location.href='home.html'
+    }
+
+    
+
+
+    }
+)
+        
+    }
+
+   
+
+   
+})
+
+
+// function updateNote(noteId){
+//   try{
+
+    
+
+//   }catch(error){
+//     console.error(error)
+//   }
+// }
+
+
+
+</script>
+</body>
+</html>
