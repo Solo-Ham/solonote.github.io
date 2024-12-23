@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async function (){
    
    
     if(noteId){
-        const response = await fetch(`http://127.0.0.1:8000/api/note-detail/${noteId}`,{
+        const response = await fetch(`https://solo20.pythonanywhere.com/api/note-detail/${noteId}`,{
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${accessToken}`,
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', async function (){
             'body': body
         }
 
-      const response = await fetch(`http://127.0.0.1:8000/api/update-note/${noteId}/`, {
+      const response = await fetch(`https://solo20.pythonanywhere.com/api/update-note/${noteId}/`, {
         method: 'PUT',
         headers: {
             'Authorization': `Bearer ${accessToken}`,
