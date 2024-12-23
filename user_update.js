@@ -40,7 +40,7 @@ document.getElementById('user-update-form').addEventListener('submit', async fun
     const email = document.getElementById('email').value
     const name = document.getElementById('name').value
 
-    const updateResponse = await fetch(`http://127.0.0.1:8000/api/user-update/${user_Id}/`, {
+    const updateResponse = await fetch(`https://solo20.pythonanywhere.com/api/user-update/${user_Id}/`, {
         method: 'PUT',
         headers: {
             'Authorization': `Bearer ${accessToken}`,
