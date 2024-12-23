@@ -29,7 +29,7 @@ document.getElementById('note-form').addEventListener('submit', async function (
     const subject = document.getElementById('title').value
     const body = document.getElementById('body').value
 
-    const response = await fetch('http://127.0.0.1:8000/api/create-note/', {
+    const response = await fetch('https://solo20.pythonanywhere.com/api/create-note/', {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${accessToken}`,
@@ -61,7 +61,7 @@ document.getElementById('user-name').addEventListener('click', function (){
 
 async function fetchData(accessToken){
    
-    const response = await fetch('http://127.0.0.1:8000/api/show-notes',{
+    const response = await fetch('https://solo20.pythonanywhere.com/api/show-notes',{
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${accessToken}`,
@@ -139,7 +139,7 @@ if(!token){
 async function currentUser(accessToken) {
     // params.preventDefault()
 
-    const response = await fetch('http://127.0.0.1:8000/api/current-user/', {
+    const response = await fetch('https://solo20.pythonanywhere.com/api/current-user/', {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${accessToken}`,
