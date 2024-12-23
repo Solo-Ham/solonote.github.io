@@ -97,7 +97,7 @@ async function fetchData(accessToken){
         delete_note.textContent = 'Delete'
         delete_note.addEventListener('click', async function (params) {
             params.preventDefault()
-            const delete_response = await fetch(`http://127.0.0.1:8000/api/note-delete/${item.id}/`,{
+            const delete_response = await fetch(`https://solo20.pythonanywhere.com/api/note-delete/${item.id}/`,{
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${accessToken}`,
