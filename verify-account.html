@@ -33,6 +33,7 @@ async function verifyAccount() {
     if(response.ok){
         const data = await response.json()
         document.getElementById('message').textContent = data.Message
+        window.location.href="login.html"
     }
     
 }
