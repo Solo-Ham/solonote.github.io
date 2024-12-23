@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async function (params) {
         const password = document.getElementById('password1').value
         const confirm_password = document.getElementById('password2').value
 
-        const response = await fetch(`http://127.0.0.1:8000/api/register/`, {
+        const response = await fetch(`https://solo20.pythonanywhere.com/api/register/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
