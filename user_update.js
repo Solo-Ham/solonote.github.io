@@ -16,7 +16,7 @@ async function userUpdate(accessToken) {
 const params = new URLSearchParams(window.location.search)
 const user_Id = params.get('user_id')
 
-const response = await fetch(`http://127.0.0.1:8000/api/current-user/`, {
+const response = await fetch(`https://solo20.pythonanywhere.com/api/current-user/`, {
     method: 'GET',
     headers: {
         'Authorization': `Bearer ${accessToken}`,
