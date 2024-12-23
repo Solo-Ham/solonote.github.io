@@ -53,7 +53,7 @@ document.getElementById('user-update-form').addEventListener('submit', async fun
     if(updateResponse.ok){
         document.getElementById('email').value = '';
         document.getElementById('name').value = '';
-        window.location.href='home.html';
+        window.location.href='index.html';
     }
 
 })
