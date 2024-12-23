@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function(){
         const password=document.getElementById('login-password').value
     
         try{
-            const response = await fetch('http://127.0.0.1:8000/api/api/token/', 
+            const response = await fetch('https://solo20.pythonanywhere.com/api/api/token/', 
             {
                 method: 'POST',
                 headers: {
