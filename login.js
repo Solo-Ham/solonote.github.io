@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function(){
         params.preventDefault()
         const email=document.getElementById('login-email').value;
 
-        const response = await fetch('http://127.0.0.1:8000/api/reset-password/', {
+        const response = await fetch('https://solo20.pythonanywhere.com/api/reset-password/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
