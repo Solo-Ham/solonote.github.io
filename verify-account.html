@@ -22,7 +22,7 @@ async function verifyAccount() {
     const uid = urlParams.get('uid')
     const token = urlParams.get('token')
 
-    const response = await fetch(`https://solo20.pythonanywhere.com/verify/${uid}/${token}`, {
+    const response = await fetch(`https://solo20.pythonanywhere.com/api/verify/${uid}/${token}`, {
         method: 'GET',
         // headers: {
         //     // 'Authorization'
