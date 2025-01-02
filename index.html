@@ -24,11 +24,11 @@
    
     <div><button id="add-note-button" style="display: none;">Add note</button></div>
     <div id="note"></div>
-    <div><p>@</><p id="year"></p></div>
+    <div><p id="year"></p></div>
 </body>
 <script>
     const currentDate = new Date()
-    document.getElementById("year").innerHTML= currentDate.getFullYear()
+    document.getElementById("year").innerHTML= '@' + currentDate.getFullYear()
     
 </script>
 <style>
