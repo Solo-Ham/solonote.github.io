@@ -24,9 +24,11 @@
    
     <div><button id="add-note-button" style="display: none;">Add note</button></div>
     <div id="note"></div>
-    <p>©2024</p>
+    <p id="year"></p>
 </body>
 <script>
+    const currentDate = new Date()
+    document.getElementById("year").innerHTML= currentDate.getFullYear()
     
 </script>
 <style>
